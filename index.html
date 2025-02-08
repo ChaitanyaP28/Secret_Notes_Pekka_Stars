@@ -134,6 +134,15 @@
             const secret = localStorage.getItem('flag') || "flag{test_flag}";
             document.getElementById('secret').innerHTML = secret;
             alert(window.location.search);
+            // Get the query string from the URL (everything after the ?)
+            const queryString = window.location.search;
+
+            // Create a new URLSearchParams object from the query string
+            const params = new URLSearchParams(queryString);
+
+            // Get a specific query parameter
+            const msd = params.get('flag');
+            alert(msd);
         </script>
     </body>
     </html>
